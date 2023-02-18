@@ -1,30 +1,54 @@
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Fonts Used](#fonts-used)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-# Welcome to Codewell! 👋
+## Overview
 
-Codewell's aim is to provide you with real-world design templates that you can use to practice your HTML and CSS projects. 
+### The challenge
 
-Free or paid, all templates are high quality and will make great portfolio pieces.
+Users should be able to:
 
-### I've completed the challenge, now what?
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
 
-We recommend using one of these two websites to deploy your projects
+### Screenshot
 
-- [GitHub Pages](https://pages.github.com/)
-- [Netlify](https://www.netlify.com/)
-
-They're super easy to setup and you should have your website up and running in no time, just follow their instructions.
-
-
-### Submit your solution to Codewell
-
-Visit the relevant challenge on [Codewell](https://codewell.cc) and click on 'Submit Solution' right under the challenge.
-Enter all the title, Github repo URL, Live URL (Netlify or GH Pages), and tell the community what challenges you've faced.
-
-### Join our community on Slack
-
-If you want more real-time communication, you can visit our community on [Slack](https://join.slack.com/t/codewell-hq/shared_invite/zt-ni8c9g8h-gNYWrmqQ3Uh37dcLg9~LMQ). 
+![](./images/screenshot.png)
 
 ### Fonts Used
 
 https://fonts.google.com/specimen/Lato
 https://fonts.google.com/specimen/Playfair+Display
+
+
+### Links
+
+- Solution URL: [GitHub repo](https://github.com/nicknjagi/hosterr-waitlist-page)
+- Live Site URL: [https://nicknjagi.github.io/hosterr-waitlist-page/](https://nicknjagi.github.io/hosterr-waitlist-page/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+
+### Useful resources
+
+- [Resource 1.](https://zellwk.com/blog/how-to-write-mobile-first-css/) - An article on how to write mobile-first CSS
+- [Resource 2.](https://www.internetingishard.com/html-and-css/flexbox/) - This Flexbox tutorial is a friendly tutorial for modern CSS layouts by [Interneting Is Hard](https://www.internetingishard.com/).
+
+## Author
+
+- Frontend Mentor - [@nicknjagi](https://www.frontendmentor.io/profile/nicknjagi)
+- Twitter - [@nick_njagi](https://www.twitter.com/nick_njagi)
+
+
