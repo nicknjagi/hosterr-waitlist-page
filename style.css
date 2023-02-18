@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap');
+/* font-family: 'Lato',sans-serif;
+font-family: 'Playfair Display',
+serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-color:#4977EA;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #F9F4E8;
+}
+
+.hidden{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    justify-content:space-between;
+    height: 50px;
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem;
+}
+.logo{
+    align-items: center;
+    gap: .5rem;
+}
+.logo img {
+    width: 100px;
+}
+.logo button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 10px;
+    color: white;
+    background: rgb(234, 176, 82);
+    background: linear-gradient(90deg, rgba(234, 176, 82, 1) 0%, rgba(235, 86, 116, 1) 100%);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+a{
+    font-family: inherit;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-btn{
+    position: relative;
+    height: 30px;
+    width:30px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.burger-menu{
+    position: absolute;
+    top: 10px;
+    height: 4px;
+    width:100%;
+    background-color: black;
+}
+.burger-menu::before, .burger-menu::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.burger-menu::before{
+    top: -10px;
+}
+.burger-menu::after{
+    top: 10px;
+}
+nav {
+    position: absolute;
+    padding-top: 5rem;
+    z-index: 1;
+    background-color: rgb(255, 228, 196);
+    height: 100svh;
+    width: 100vw;
+}
+nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+nav div:nth-child(2){
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+}
+button{
+    font-family: inherit;
+}
+button:hover, input[type=submit]{
+    cursor: pointer;
+}
+nav button{
+    margin-inline: auto;
+}
+.sign-in-btn{
+    padding: 8px 14px;
+    border: none;
+    border-radius: 3px;
+    background-color: #F9F4E8;
+}
+.sign-in-btn:hover{
+    background-color: rgb(234, 227, 216);
+}
+.waitlist-btn{
+    padding: 8px 10px;
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+.waitlist-btn:hover {
+    background-color: #6f91e4;
+}
+
+main{
+    padding-inline: 1rem;
+    flex-direction: column;
+}
+.hero-container {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-block: 3rem ;
+}
+.hero-container div img {
+    width: 250px;
+}
+.hero-container div:nth-child(2){
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    transform: rotate(-20deg);
+}
+.hero-container div:nth-child(3){
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    transform: rotate(-40deg);
+}
+.hero-container div:nth-child(4){
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    transform: rotate(-60deg);
+}
+h1{
+    font-family: 'Playfair Display', serif;
+    padding-right: 6rem;
+    padding-bottom: 1rem;
+}
+form{
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-block: 0.75rem;
+}
+form input[type=email]{
+    padding: 0.75rem;
+    outline: transparent;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+}
+form input[type=submit]{
+    padding: 0.75rem;
+}
+.section div {
+    align-items: center;
+    gap: 0.5rem;
+}
+.section div i{
+    color: rgb(31, 177, 128);
+}
+footer {
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: 2rem;
+    padding-inline: 1rem;
+}
+.help {
+    gap: 0.5rem;
+}
