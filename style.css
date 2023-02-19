@@ -129,7 +129,7 @@ nav button{
     background-color: rgb(234, 227, 216);
 }
 .waitlist-btn{
-    padding: 8px 10px;
+    padding: 8px 12px;
     background-color: var(--btn-color);
     border: none;
     border-radius: 3px;
@@ -205,4 +205,28 @@ footer {
 }
 .help {
     gap: 0.5rem;
+}
+
+@media screen and (min-width:600px){
+    body{
+        padding-inline: 1rem;
+    }
+    h1{ 
+        padding-right: 0;
+        font-size: 3rem;
+    }
+    p{
+        line-height: 1.5rem;
+    }
+    form {
+        flex-direction: row;
+    }
+    form input[type=email]{
+        width: 15rem;
+    }
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
