@@ -29,7 +29,6 @@ body{
 header{
     justify-content:space-between;
     height: 50px;
-    max-width: 960px;
     margin: auto;
     padding: 1rem;
 }
@@ -93,6 +92,8 @@ a{
 }
 nav {
     position: absolute;
+    top: 0;
+    left: 0;
     padding-top: 5rem;
     z-index: 1;
     background-color: rgb(255, 228, 196);
@@ -118,6 +119,7 @@ button:hover, input[type=submit]{
 }
 nav button{
     margin-inline: auto;
+    font-size: initial;
 }
 .sign-in-btn{
     padding: 8px 14px;
@@ -129,7 +131,7 @@ nav button{
     background-color: rgb(234, 227, 216);
 }
 .waitlist-btn{
-    padding: 8px 12px;
+    padding: 10px 12px;
     background-color: var(--btn-color);
     border: none;
     border-radius: 3px;
@@ -142,6 +144,7 @@ nav button{
 main{
     padding-inline: 1rem;
     flex-direction: column;
+    margin: auto;
 }
 .hero-container {
     flex-direction: column;
@@ -181,14 +184,13 @@ form{
     margin-block: 0.75rem;
 }
 form input[type=email]{
-    padding: 0.75rem;
     outline: transparent;
     border: none;
     border-radius: 3px;
     font-family: inherit;
 }
-form input[type=submit]{
-    padding: 0.75rem;
+form input{
+    padding: 1rem;
 }
 .section div {
     align-items: center;
@@ -200,16 +202,18 @@ form input[type=submit]{
 footer {
     flex-direction: column;
     gap: 2rem;
-    margin-block: 2rem;
+    margin: 2rem auto;
     padding-inline: 1rem;
 }
 .help {
     gap: 0.5rem;
 }
-
+header, main, footer{
+        max-width:480px;
+    }
 @media screen and (min-width:600px){
     body{
-        padding-inline: 1rem;
+        padding: 1rem;
     }
     h1{ 
         padding-right: 0;
@@ -218,15 +222,96 @@ footer {
     p{
         line-height: 1.5rem;
     }
+    .hero-container div img{
+        width: 300px;
+    }
     form {
         flex-direction: row;
     }
     form input[type=email]{
-        width: 15rem;
+        width: 50%;
     }
     footer{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    header, main, footer{
+        max-width:680px;
+    }
+}
+
+@media screen and (min-width:960px) { 
+    body {
+        padding: 1.5rem 3rem;
+        font-size: 18px;
+    }
+    header{
+        justify-content: space-between;
+        max-width: 1160px;
+    }
+    .logo{
+        flex: 1;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        flex: 2;
+        position: relative;
+        margin-inline: auto;
+        padding: 0;
+        width: auto;
+        height: auto;
+        background-color: inherit;
+    }
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    nav div:nth-child(2){
+        flex-direction: row;
+        align-items: center;
+        margin-right: -1.5rem;
+    }
+    nav div:nth-child(2) button{
+        font-size: inherit;
+    }
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        max-width: 1160px;
+        margin:5rem auto;
+        
+    }
+    .hero-container{
+        order: 2;
+    }
+    .hero-container div img{
+        width: 380px;
+        margin: auto;
+    }
+    .section {
+        max-width: 500px;
+    }
+    .section p{
+        line-height: 1.75rem;
+    }
+    form {
+        gap: 1rem;
+        margin: 1.75rem 0;
+    }
+    form input[type="email"]{
+        width: 300px;
+        font-size: inherit;
+    }
+    form input[type="submit"]{
+        width: 30%;
+        font-size: inherit;
+    }
+    footer {
+        max-width: 1160px;
+        margin: auto;
     }
 }
