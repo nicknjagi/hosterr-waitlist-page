@@ -16,12 +16,8 @@ serif; */
 body{
     font-family: 'Lato', sans-serif;
     background-color: #F9F4E8;
+    padding-block: 0.5rem;
 }
-
-.hidden{
-    display: none;
-}
-
 .flex{
     display: flex;
 }
@@ -55,6 +51,10 @@ ul {
     gap: 1rem;
 }
 
+li:hover{
+    border-bottom: 3px solid rgb(234, 176, 82);
+}
+
 a{
     font-family: inherit;
     text-decoration: none;
@@ -66,6 +66,7 @@ a{
     height: 30px;
     width:30px;
     top: 0;
+    z-index: 2;
     right: 0;
     cursor: pointer;
 }
@@ -76,6 +77,7 @@ a{
     height: 4px;
     width:100%;
     background-color: black;
+    transition-delay: 400ms;
 }
 .burger-menu::before, .burger-menu::after{
     position: absolute;
@@ -83,6 +85,7 @@ a{
     height: 4px;
     width: 100%;
     background-color: rgb(0, 0, 0);
+    transition: all 400ms ease-in-out;
 }
 .burger-menu::before{
     top: -10px;
@@ -90,26 +93,51 @@ a{
 .burger-menu::after{
     top: 10px;
 }
+.menu-btn.open .burger-menu {
+    height: 0;
+    transition-delay: 0ms;
+}
+.menu-btn.open .burger-menu::before{
+    transform: rotate(45deg) translateY(14px);
+    transition: all 400ms ease-in-out;
+}
+.menu-btn.open .burger-menu::after{
+    transform: rotate(-45deg) translateY(-14px);
+    transition: all 400ms ease-in-out;
+}
 nav {
     position: absolute;
     top: 0;
-    left: 0;
-    padding-top: 5rem;
+    right: 0;
+    margin-top: 4.5rem;
+    padding-block: 3rem;
     z-index: 1;
-    background-color: rgb(255, 228, 196);
-    height: 100svh;
-    width: 100vw;
+    background-color:#f4ecda;
+    height: auto;
+    max-height: 60vh;
+    width:100vw;
+    font-size: 18px;
+    transform: translateX(200%);
+    transition: transform 400ms ease-in-out;
+}
+.show-nav{
+    transform: translateX(0);
+    transition: transform 400ms ease-in-out;
 }
 nav ul {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    width: 50vw;
+    padding-bottom: 2rem;
+    margin-left: auto;
     gap: 2rem;
 }
 nav div:nth-child(2){
     flex-direction: column;
     gap: 2rem;
-    margin: 0 auto;
+    width: 50vw;
+    margin-left: auto;
+    font-size: 18px;
 }
 button{
     font-family: inherit;
@@ -150,7 +178,7 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-block: 3rem ;
+    margin:  3rem auto ;
 }
 .hero-container div img {
     width: 250px;
@@ -243,47 +271,51 @@ header, main, footer{
 
 @media screen and (min-width:960px) { 
     body {
-        padding: 1.5rem 3rem;
+        /* padding: 1.5rem 3rem; */
         font-size: 18px;
     }
     header{
-        justify-content: space-between;
-        max-width: 1160px;
+        justify-content: space-evenly;
+        max-width: 1100px;
     }
     .logo{
         flex: 1;
     }
+    .menu-btn{
+        display: none;
+    }
     nav{
-        display: flex;
+        display:flex;
         justify-content: space-between;
         flex: 2;
         position: relative;
-        margin-inline: auto;
+        margin: 0 auto;
         padding: 0;
         width: auto;
         height: auto;
         background-color: inherit;
+        transform: translateX(0);
+        transition: none;
     }
     nav ul {
         flex-direction: row;
         align-items: center;
+        width: auto;
     }
     nav div:nth-child(2){
         flex-direction: row;
         align-items: center;
-        margin-right: -1.5rem;
-    }
-    nav div:nth-child(2) button{
-        font-size: inherit;
+        transform: translateX(-20px);
+        margin-left: 0;
+        width: auto;
     }
     main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 3rem;
+        gap: 6rem;
         max-width: 1160px;
         margin:5rem auto;
-        
     }
     .hero-container{
         order: 2;
